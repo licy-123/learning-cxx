@@ -29,10 +29,10 @@ int main(int argc, char **argv) {
     std::ignore = std::move(ptrs[0]);
     ptrs[1] = std::move(ptrs[1]);
     ptrs[1] = std::move(ptrs[2]);
-    ASSERT(observer.use_count() == 1, "");
+    ASSERT(observer.use_count() == 2, "");
 
     shared = observer.lock();
-    ASSERT(observer.use_count() == 2, "");
+    ASSERT(observer.use_count() == 3, "");
 
     shared = nullptr;
     for (auto &ptr : ptrs) ptr = nullptr;
