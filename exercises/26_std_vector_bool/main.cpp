@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
         ref = false;
         ASSERT(!ref, "Fill in `ref` or `!ref`");
         // THINK: WHAT and WHY?
-        ASSERT(vec[30], "Fill in `vec[30]` or `!vec[30]`.");
+        ASSERT(!vec[30], "Fill in `vec[30]` or `!vec[30]`.");
     }
     return 0;
 }
